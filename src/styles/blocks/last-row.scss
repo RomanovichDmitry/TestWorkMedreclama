@@ -1,0 +1,93 @@
+.last-row {
+  .specialists-and-reviews {
+    display: flex;
+    justify-content: space-between;
+    .specialists {
+      width: 100%;
+      margin-right: 30px;
+      &__list {
+        display: flex;
+        align-items: center;
+      }
+      &__item {
+        padding: 10px;
+        height: 200px;
+        a {
+          color: black;
+        }
+      }
+      &__photo {
+        object-fit: cover;
+        width: 100%;
+        height: 240px;
+        border: 2px solid #D90800;
+        border-radius: 10px;
+        transition: .2s;
+        &:hover{
+          transition: .2s;
+          border: 2px solid $mc;
+        }
+      }
+      &__title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      &__name {
+        font-size: 1.1rem;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+    .specialists, .reviews {
+      width: 45%;
+    }
+    .reviews {
+      &__title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      &__item {
+        padding: 10px;
+      }
+      &__name {
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-decoration: underline;
+        margin-bottom: 15px;
+      }
+      &__text {
+        display: -webkit-box;
+        font-size: 1rem;
+        -webkit-line-clamp: 9;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: #565656;
+      }
+      .read__more {
+        cursor:pointer;
+        border: none;
+        font-weight: 600;
+        border-bottom: 1px dotted black;
+      }
+      .reviews__text.active {
+        -webkit-line-clamp: inherit;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .specialists-and-reviews {
+      flex-direction: column;
+      max-width: 320px;
+      .specialists, .reviews {
+        width: 100%;
+      }
+      .specialists {
+        margin-bottom: 30px;
+        margin-right: 0;
+        &__photo {
+          height: 300px;
+        }
+      }
+    }
+  }
+}

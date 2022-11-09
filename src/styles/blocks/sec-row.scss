@@ -1,0 +1,76 @@
+.sec-row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f1f1f1;
+  margin-bottom: 30px;
+  .info {
+    div {
+      width: 50%;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    display: flex;
+    margin-bottom: 20px;
+    .advantages {
+      &__title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      &__list {
+        font-size: 1rem;
+        li {
+          list-style: auto;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .our-advantages {
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    &__item {
+      position: relative;
+      font-size: 1rem;
+      display: flex;
+      padding-left: 50px;
+      margin-bottom: 15px;
+      &:nth-child(1):before,
+      &:nth-child(2):before,
+      &:nth-child(3):before, {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &:nth-child(1):before {background-image: url(/public/images/siren.png);}
+      &:nth-child(2):before {background-image: url(/public/images/guarantee.png);}
+      &:nth-child(3):before {background-image: url(/public/images/equality.png);}
+      &:before {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        content: '';
+        display: block;
+        width: 35px;
+        height: 35px;
+        //background-color: #000;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .info {
+      flex-direction: column;
+      div {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-right: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
